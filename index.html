@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="https://unpkg.com/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.10.4/dist/cdn.min.js"></script>
+  <title>Empowertech</title>
+</head>
+<body>
+
+  <!-- Wrapper -->
+  <div 
+  x-data="{
+    open: false,
+    toggle() {
+      this.open = ! this.open
+    },
+    close() {
+      this.open = false
+    },
+  }"
+  @keydown.escape.prevent.stop="close()">
+    <nav class="flex flex-col">
+      <!-- Navigation menu -->
+      <div class="container flex flex-row items-center justify-between h-16 px-6 py-6 mx-auto">
+        <!-- Logo -->
+        <img class="h-14" src="images/empowertech_logo.JPG" alt=""/>
+        <!-- Desktop menu -->
+        <div class="flex-row hidden space-x-4 md:flex">
+          <a href="" class="block">Home</a>
+          <a href="" class="block">About Us</a>
+          <a href="" class="block">Contact</a>
+        </div>
+        <!-- Contact Us button -->
+        <a href="#" class="hidden px-3 py-2 text-white bg-orange-400 md:block rounded-2xl">Contact Us</a>
+        <!-- Hamburger button -->
+        <button 
+          @click="toggle()"
+          type="button"
+          :class="open ? 'open' : ''" 
+          class="block hamburger focus:outline-none md:hidden">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+      </div>
+      
+      <!-- Mobile menu -->
+      <div 
+        x-show="open"
+        x-trap.noscroll="open"
+        x-transition.opacity
+        @click.outside="close()"
+        class="absolute left-0 z-10 w-full top-16 md:hidden ">
+        <div class="p-6 m-6 bg-white rounded-xl">
+          <a href="" class="block">Home</a>
+          <a href="" class="block">About Us</a>
+          <a href="" class="block">Contact</a>
+        </div>
+      </div>  
+    </nav> 
+
+    <section id="hero" class="relative px-6 overflow-hidden py-24 h-96 bg-orange-50 ">
+      <div class="container flex flex-row mx-auto">
+        <div class="flex flex-col items-start space-y-8 md:w-2/5">
+          <h1 class="text-4xl">Website and Mobile App developers based in Sydney, Australia</h1>
+          <!-- Contact Us button -->
+          <a href="#" class="block px-3 py-2 text-white bg-orange-400 rounded-2xl">Contact Us</a>
+        </div>
+        <img class="absolute -top-32 -right-48 w-[740px] hidden md:block" src="images/bg-intro-desktop.svg" alt=""/>
+        <img class="absolute -right-32 -top-64 w-[580px] hidden md:block" src="images/image-mockups.png" alt=""/>
+      </div>
+    </section>
+
+    <section id="why" class="px-6 py-12 bg-orange-100">
+      <div class="container flex flex-row mx-auto">
+        <div>
+          <h2 class="text-2xl">Why Choose Us</h2>
+        </div>
+        
+      </div>
+    </section>
+
+    <section id="projects" class="px-6 py-12 bg-orange-50">
+      <div class="container flex flex-row mx-auto">
+        <div>
+          <h2 class="text-2xl">Projects</h2>
+        </div>
+        
+      </div>
+    </section>
+
+    <footer class="bg-orange-900">
+      <div class="container flex flex-row mx-auto">
+        <div>
+          <h2 class="text-2xl">Projects</h2>
+        </div>
+        
+      </div>
+    </footer>
+
+    <!-- Page dimmer -->
+    <div
+      x-show="open"
+      x-transition.opacity
+      class="fixed bottom-0 left-0 right-0 bg-gray-900 bg-opacity-50 top-16 md:bg-opacity-0">
+    </div>
+  </div>
+  
+</body>
+</html>
