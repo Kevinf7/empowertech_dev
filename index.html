@@ -13,17 +13,18 @@
 
   <!-- Wrapper -->
   <div 
-  x-data="{
-    open: false,
-    toggle() {
-      this.open = ! this.open
-    },
-    close() {
-      this.open = false
-    },
-  }"
-  @keydown.escape.prevent.stop="close()">
-    <nav class="flex flex-col">
+    class="flex flex-col min-h-screen"
+    x-data="{
+      open: false,
+      toggle() {
+        this.open = ! this.open
+      },
+      close() {
+        this.open = false
+      },
+    }"
+    @keydown.escape.prevent.stop="close()">
+    <nav class="relative z-50 flex flex-col bg-white">
       <!-- Navigation menu -->
       <div class="container flex flex-row items-center justify-between h-16 px-6 py-6 mx-auto">
         <!-- Logo -->
@@ -54,7 +55,7 @@
         x-trap.noscroll="open"
         x-transition.opacity
         @click.outside="close()"
-        class="absolute left-0 z-10 w-full top-16 md:hidden ">
+        class="absolute left-0 w-full top-16 md:hidden ">
         <div class="p-6 m-6 bg-white rounded-xl">
           <a href="" class="block">Home</a>
           <a href="" class="block">About Us</a>
@@ -63,42 +64,59 @@
       </div>  
     </nav> 
 
-    <section id="hero" class="relative px-6 overflow-hidden py-24 h-96 bg-orange-50 ">
-      <div class="container flex flex-row mx-auto">
-        <div class="flex flex-col items-start space-y-8 md:w-2/5">
-          <h1 class="text-4xl">Website and Mobile App developers based in Sydney, Australia</h1>
+    <section id="hero" class="relative z-10 px-6 py-24 bg-orange-50 overflow-x-clip">
+      <div class="container mx-auto">
+        <img class="absolute block max-w-6xl -top-[520px] -right-60 md:hidden" src="images/bg-intro-desktop.svg" alt=""/>
+        <img class="absolute -top-56 w-[580px] block md:hidden" src="images/image-mockups.png" alt=""/>
+        <div class="flex flex-col items-start space-y-8 pt-[360px] md:pt-0 md:w-2/5">
+          <h1 class="text-4xl font-medium">Website and Mobile App developers based in Sydney, Australia</h1>
           <!-- Contact Us button -->
           <a href="#" class="block px-3 py-2 text-white bg-orange-400 rounded-2xl">Contact Us</a>
         </div>
-        <img class="absolute -top-32 -right-48 w-[740px] hidden md:block" src="images/bg-intro-desktop.svg" alt=""/>
-        <img class="absolute -right-32 -top-64 w-[580px] hidden md:block" src="images/image-mockups.png" alt=""/>
+        <img class="absolute -top-20 -right-48 w-[740px] hidden md:block" src="images/bg-intro-desktop.svg" alt=""/>
+        <img class="absolute -right-32 -top-56 w-[580px] hidden md:block" src="images/image-mockups.png" alt=""/>
       </div>
     </section>
 
-    <section id="why" class="px-6 py-12 bg-orange-100">
+    <section id="why" class="relative px-6 py-20 bg-orange-100">
+      <div class="container mx-auto">
+        <div class="flex flex-col space-y-10">
+          <h2 class="text-3xl font-medium">Why Choose Us?</h2>
+          <div class="flex flex-col items-start justify-between space-y-12 md:flex-row md:space-x-10 md:space-y-0">
+            <div class="flex flex-col space-y-4 md:w-1/3">
+              <img class="w-14 opacity-90" src="images/verify.png" alt=""/>
+              <h3 class="text-xl font-medium">Hybrid Technology</h3>
+              <p class="">We use the latest hybrid technology capable of delivering website, Android and iOS apps in one build thus providing you with great savings.</p>
+            </div>
+            <div class="flex flex-col space-y-4 md:w-1/3">
+              <img class="w-14 opacity-90" src="images/verify.png" alt=""/>
+              <h3 class="text-xl font-medium">Tech Freelancers</h3>
+              <p class="">We are tech freelancers so our charges are economical.</p>
+            </div>
+            <div class="flex flex-col space-y-4 md:w-1/3">
+              <img class="w-14 opacity-90" src="images/verify.png" alt=""/>
+              <h3 class="text-xl font-medium">Flexible</h3>
+              <p class="">We have flexible work schedule to work on your requirements.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="px-6 py-20 bg-orange-50">
       <div class="container flex flex-row mx-auto">
         <div>
-          <h2 class="text-2xl">Why Choose Us</h2>
+          <h2 class="text-3xl font-medium">Projects</h2>
         </div>
         
       </div>
     </section>
 
-    <section id="projects" class="px-6 py-12 bg-orange-50">
-      <div class="container flex flex-row mx-auto">
+    <footer class="flex-1 px-12 pt-6 pb-24 bg-orange-900">
+      <div class="container flex flex-col items-center mx-auto">
         <div>
-          <h2 class="text-2xl">Projects</h2>
+          <p class="text-xs text-orange-50">&copy; 2021 - 2023 Empowertech</p>
         </div>
-        
-      </div>
-    </section>
-
-    <footer class="bg-orange-900">
-      <div class="container flex flex-row mx-auto">
-        <div>
-          <h2 class="text-2xl">Projects</h2>
-        </div>
-        
       </div>
     </footer>
 
@@ -106,9 +124,9 @@
     <div
       x-show="open"
       x-transition.opacity
-      class="fixed bottom-0 left-0 right-0 bg-gray-900 bg-opacity-50 top-16 md:bg-opacity-0">
+      class="fixed bottom-0 left-0 right-0 z-40 bg-gray-900 bg-opacity-50 top-16 md:bg-opacity-0">
     </div>
+
   </div>
-  
 </body>
 </html>
