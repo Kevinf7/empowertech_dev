@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="https://unpkg.com/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.10.4/dist/cdn.min.js"></script>
+  <title>Empowertech</title>
+</head>
+<body>
+
+  <!-- Wrapper -->
+  <div 
+    class="flex flex-col min-h-screen"
+    x-data="{
+      open: false,
+      toggle() {
+        this.open = ! this.open
+      },
+      close() {
+        this.open = false
+      },
+    }"
+    @keydown.escape.prevent.stop="close()">
+    <nav class="relative z-50 flex flex-col bg-white">
+      <!-- Navigation menu -->
+      <div class="container flex flex-row items-center justify-between h-16 px-6 py-6 mx-auto">
+        <!-- Logo -->
+        <img class="h-14" src="images/empowertech_logo.JPG" alt=""/>
+        <!-- Desktop menu -->
+        <div class="flex-row items-center hidden space-x-4 md:flex">
+          <a href="index.html" class="block duration-100 border-b-4 border-white hover:border-orange-400">Home</a>
+          <a href="contact.html" class="block duration-100 border-b-4 border-white hover:border-orange-400">Contact</a>
+        </div>
+        <!-- Contact Us button -->
+        <a href="#" class="hidden px-3 py-2 text-white duration-75 bg-orange-400 md:block rounded-2xl hover:bg-orange-900">Contact Us</a>
+        <!-- Hamburger button -->
+        <button 
+          @click="toggle()"
+          type="button"
+          :class="open ? 'open' : ''" 
+          class="block hamburger focus:outline-none md:hidden">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+      </div>
+      
+      <!-- Mobile menu -->
+      <div 
+        x-show="open"
+        x-trap.noscroll="open"
+        x-transition.opacity
+        @click.outside="close()"
+        class="absolute left-0 w-full top-16 md:hidden ">
+        <div class="flex flex-col p-6 m-6 space-y-2 bg-white rounded-xl">
+          <a href="index.html" class="block">Home</a>
+          <a href="contact.html" class="block">Contact</a>
+        </div>
+      </div>  
+    </nav> 
+
+    <section id="contact" class="relative px-6 py-20 bg-orange-50">
+      <div class="container mx-auto">
+        <div class="flex flex-col space-y-10">
+          <h2 class="text-3xl font-medium">Contact</h2>
+
+        </div>
+      </div>
+    </section>
+
+    <footer class="flex-1 px-12 pt-6 pb-24 bg-orange-900">
+      <div class="container flex flex-col items-center mx-auto">
+        <div>
+          <p class="text-xs text-orange-50">&copy; 2021 - 2023 Empowertech</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Page dimmer -->
+    <div
+      x-show="open"
+      x-transition.opacity
+      class="fixed bottom-0 left-0 right-0 z-40 bg-gray-900 bg-opacity-50 top-16 md:bg-opacity-0">
+    </div>
+
+  </div>
+</body>
+</html>

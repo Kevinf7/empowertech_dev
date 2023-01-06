@@ -30,13 +30,12 @@
         <!-- Logo -->
         <img class="h-14" src="images/empowertech_logo.JPG" alt=""/>
         <!-- Desktop menu -->
-        <div class="flex-row hidden space-x-4 md:flex">
-          <a href="" class="block">Home</a>
-          <a href="" class="block">About Us</a>
-          <a href="" class="block">Contact</a>
+        <div class="flex-row items-center hidden space-x-4 md:flex">
+          <a href="index.html" class="block duration-100 border-b-4 border-white hover:border-orange-400">Home</a>
+          <a href="contact.html" class="block duration-100 border-b-4 border-white hover:border-orange-400">Contact</a>
         </div>
         <!-- Contact Us button -->
-        <a href="#" class="hidden px-3 py-2 text-white bg-orange-400 md:block rounded-2xl">Contact Us</a>
+        <a href="contact.html" class="hidden px-3 py-2 text-white duration-75 bg-orange-400 md:block rounded-2xl hover:bg-orange-900">Contact Us</a>
         <!-- Hamburger button -->
         <button 
           @click="toggle()"
@@ -56,14 +55,13 @@
         x-transition.opacity
         @click.outside="close()"
         class="absolute left-0 w-full top-16 md:hidden ">
-        <div class="p-6 m-6 bg-white rounded-xl">
-          <a href="" class="block">Home</a>
-          <a href="" class="block">About Us</a>
-          <a href="" class="block">Contact</a>
+        <div class="flex flex-col p-6 m-6 space-y-2 bg-white rounded-xl">
+          <a href="index.html" class="block">Home</a>
+          <a href="contact.html" class="block">Contact</a>
         </div>
-      </div>  
-    </nav> 
-
+      </div>
+    </nav>
+      
     <section id="hero" class="relative z-10 px-6 py-24 bg-orange-50 overflow-x-clip">
       <div class="container mx-auto">
         <img class="absolute block max-w-6xl -top-[520px] -right-60 md:hidden" src="images/bg-intro-desktop.svg" alt=""/>
@@ -71,14 +69,14 @@
         <div class="flex flex-col items-start space-y-8 pt-[360px] md:pt-0 md:w-2/5">
           <h1 class="text-4xl font-medium">Website and Mobile App developers based in Sydney, Australia</h1>
           <!-- Contact Us button -->
-          <a href="#" class="block px-3 py-2 text-white bg-orange-400 rounded-2xl">Contact Us</a>
+          <a href="contact.html" class="block px-3 py-2 text-white duration-75 bg-orange-400 rounded-2xl hover:bg-orange-900">Contact Us</a>
         </div>
         <img class="absolute -top-20 -right-48 w-[740px] hidden md:block" src="images/bg-intro-desktop.svg" alt=""/>
         <img class="absolute -right-32 -top-56 w-[580px] hidden md:block" src="images/image-mockups.png" alt=""/>
       </div>
     </section>
 
-    <section id="why" class="relative px-6 py-20 bg-orange-100">
+    <section id="why" class="px-6 py-20 bg-orange-100">
       <div class="container mx-auto">
         <div class="flex flex-col space-y-10">
           <h2 class="text-3xl font-medium">Why Choose Us?</h2>
@@ -86,17 +84,17 @@
             <div class="flex flex-col space-y-4 md:w-1/3">
               <img class="w-14 opacity-90" src="images/verify.png" alt=""/>
               <h3 class="text-xl font-medium">Hybrid Technology</h3>
-              <p class="">We use the latest hybrid technology capable of delivering website, Android and iOS apps in one build thus providing you with great savings.</p>
+              <p>We use the latest hybrid technology capable of delivering website, Android and iOS apps in one build, thus providing you with great savings.</p>
             </div>
             <div class="flex flex-col space-y-4 md:w-1/3">
               <img class="w-14 opacity-90" src="images/verify.png" alt=""/>
               <h3 class="text-xl font-medium">Tech Freelancers</h3>
-              <p class="">We are tech freelancers so our charges are economical.</p>
+              <p>We are tech freelancers so our charges are economical.</p>
             </div>
             <div class="flex flex-col space-y-4 md:w-1/3">
               <img class="w-14 opacity-90" src="images/verify.png" alt=""/>
               <h3 class="text-xl font-medium">Flexible</h3>
-              <p class="">We have flexible work schedule to work on your requirements.</p>
+              <p>We have flexible work schedule to work on your requirements.</p>
             </div>
           </div>
         </div>
@@ -104,9 +102,29 @@
     </section>
 
     <section id="projects" class="px-6 py-20 bg-orange-50">
-      <div class="container flex flex-row mx-auto">
-        <div>
+      <div class="container mx-auto">
+        <div class="flex flex-col space-y-10">
           <h2 class="text-3xl font-medium">Projects</h2>
+          <div class="flex flex-col items-start justify-between space-y-12 md:flex-row md:space-x-10 md:space-y-0">
+            <div class="relative flex flex-col space-y-4 md:w-1/3">
+              <img class="w-64" src="images/umiya_web.JPG" alt=""/>
+              <img class="absolute w-16 top-10 left-40" src="images/umiya_mobile.png" alt=""/>
+              <h3 class="text-xl font-medium">Umiya Matrimony</h3>
+              <p>Some blurb</p>
+            </div>
+            <div class="relative flex flex-col space-y-4 md:w-1/3">
+              <img class="w-64" src="images/IM_web.JPG" alt=""/>
+              <img class="absolute w-16 top-10 left-40" src="images/im_mobile.png" alt=""/>
+              <h3 class="text-xl font-medium">Indian Matrimonial</h3>
+              <p>Some blurb</p>
+            </div>
+            <div class="relative flex flex-col space-y-4 md:w-1/3">
+              <img class="w-64" src="images/clean_web.JPG" alt=""/>
+              <img class="absolute w-16 top-10 left-40" src="images/clean_mobile.png" alt=""/>
+              <h3 class="text-xl font-medium">Cleaning Project</h3>
+              <p>Some blurb</p>
+            </div>
+          </div>
         </div>
         
       </div>
