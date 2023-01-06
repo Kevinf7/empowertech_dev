@@ -31,11 +31,11 @@
         <img class="h-14" src="images/empowertech_logo.JPG" alt=""/>
         <!-- Desktop menu -->
         <div class="flex-row items-center hidden space-x-4 md:flex">
-          <a href="index.html" class="block duration-100 border-b-4 border-white hover:border-orange-400">Home</a>
-          <a href="contact.html" class="block duration-100 border-b-4 border-white hover:border-orange-400">Contact</a>
+          <a href="index.html" class="block duration-100 border-b-4 border-white menu-link hover:border-orange-400">Home</a>
+          <a href="contact.html" class="block duration-100 border-b-4 border-white menu-link hover:border-orange-400">Contact</a>
         </div>
         <!-- Contact Us button -->
-        <a href="contact.html" class="hidden px-3 py-2 text-white duration-75 bg-orange-400 md:block rounded-2xl hover:bg-orange-900">Contact Us</a>
+        <a href="contact.html" class="hidden md:block btn">Contact Us</a>
         <!-- Hamburger button -->
         <button 
           @click="toggle()"
@@ -56,8 +56,8 @@
         @click.outside="close()"
         class="absolute left-0 w-full top-16 md:hidden ">
         <div class="flex flex-col p-6 m-6 space-y-2 bg-white rounded-xl">
-          <a href="index.html" class="block">Home</a>
-          <a href="contact.html" class="block">Contact</a>
+          <a href="index.html" class="block menu-link">Home</a>
+          <a href="contact.html" class="block menu-link">Contact</a>
         </div>
       </div>
     </nav>
@@ -69,7 +69,7 @@
         <div class="flex flex-col items-start space-y-8 pt-[360px] md:pt-0 md:w-2/5">
           <h1 class="text-4xl font-medium">Website and Mobile App developers based in Sydney, Australia</h1>
           <!-- Contact Us button -->
-          <a href="contact.html" class="block px-3 py-2 text-white duration-75 bg-orange-400 rounded-2xl hover:bg-orange-900">Contact Us</a>
+          <a href="contact.html" class="btn">Contact Us</a>
         </div>
         <img class="absolute -top-20 -right-48 w-[740px] hidden md:block" src="images/bg-intro-desktop.svg" alt=""/>
         <img class="absolute -right-32 -top-56 w-[580px] hidden md:block" src="images/image-mockups.png" alt=""/>
@@ -82,19 +82,19 @@
           <h2 class="text-3xl font-medium">Why Choose Us?</h2>
           <div class="flex flex-col items-start justify-between space-y-12 md:flex-row md:space-x-10 md:space-y-0">
             <div class="flex flex-col space-y-4 md:w-1/3">
-              <img class="w-14 opacity-90" src="images/verify.png" alt=""/>
+              <img class="w-14" src="images/verify.png" alt=""/>
               <h3 class="text-xl font-medium">Hybrid Technology</h3>
               <p>We use the latest hybrid technology capable of delivering website, Android and iOS apps in one build, thus providing you with great savings.</p>
             </div>
             <div class="flex flex-col space-y-4 md:w-1/3">
-              <img class="w-14 opacity-90" src="images/verify.png" alt=""/>
+              <img class="w-14" src="images/verify.png" alt=""/>
               <h3 class="text-xl font-medium">Tech Freelancers</h3>
-              <p>We are tech freelancers so our charges are economical.</p>
+              <p>We are highly qualified IT professionals with many years of IT experience. We work in our spare time as tech freelancers so our charges are economical.</p>
             </div>
             <div class="flex flex-col space-y-4 md:w-1/3">
-              <img class="w-14 opacity-90" src="images/verify.png" alt=""/>
-              <h3 class="text-xl font-medium">Flexible</h3>
-              <p>We have flexible work schedule to work on your requirements.</p>
+              <img class="w-14" src="images/verify.png" alt=""/>
+              <h3 class="text-xl font-medium">Flexible & Proven</h3>
+              <p>We have a flexible work schedule to work on your requirements. We have proven to deliver quality products that meets client requirements.</p>
             </div>
           </div>
         </div>
@@ -107,22 +107,36 @@
           <h2 class="text-3xl font-medium">Projects</h2>
           <div class="flex flex-col items-start justify-between space-y-12 md:flex-row md:space-x-10 md:space-y-0">
             <div class="relative flex flex-col space-y-4 md:w-1/3">
-              <img class="w-64" src="images/umiya_web.JPG" alt=""/>
-              <img class="absolute w-16 top-10 left-40" src="images/umiya_mobile.png" alt=""/>
-              <h3 class="text-xl font-medium">Umiya Matrimony</h3>
-              <p>Some blurb</p>
+              <img class="w-80" src="images/umiya_web.JPG" alt=""/>
+              <img class="absolute w-20 drop-shadow-lg top-14 left-52 md:top-8 md:w-16 md:left-40 lg:top-14 lg:left-56 lg:w-20" src="images/umiya_mobile.png" alt=""/>
+              <h3 class="pt-8 text-xl font-medium">Umiya Matrimony</h3>
+              <a class="block text-sm" href="https://www.umiyamatrimony.com">https://www.umiyamatrimony.com</a>
+              <div class="flex flex-row items-start space-x-2">
+                <svg class="w-5 opacity-80" viewBox="0 0 24 24"><defs><style>.cls-1{fill:none;stroke:#020202;stroke-miterlimit:10;stroke-width:1.92px}</style></defs><g id="roll_brush" data-name="roll brush"><path d="M1.46 1.5h21.1v21.1H1.46z" class="cls-1"/><path d="M22.56 7.25H1.46V1.5h21.1v5.75zM4.34 4.38h1.91M8.17 4.38h1.92M12.01 4.38h1.92" class="cls-1"/></g></svg>
+                <svg class="w-5 opacity-80" viewBox="0 0 553.048 553.048"><path d="M76.774 179.141c-9.529 0-17.614 3.323-24.26 9.969-6.646 6.646-9.97 14.621-9.97 23.929v142.914c0 9.541 3.323 17.619 9.97 24.266 6.646 6.646 14.731 9.97 24.26 9.97 9.522 0 17.558-3.323 24.101-9.97 6.53-6.646 9.804-14.725 9.804-24.266V213.039c0-9.309-3.323-17.283-9.97-23.929-6.647-6.646-14.627-9.969-23.935-9.969zM351.972 50.847 375.57 7.315c1.549-2.882.998-5.092-1.658-6.646-2.883-1.34-5.098-.661-6.646 1.989l-23.928 43.88c-21.055-9.309-43.324-13.972-66.807-13.972-23.488 0-45.759 4.664-66.806 13.972l-23.929-43.88c-1.555-2.65-3.77-3.323-6.646-1.989-2.662 1.561-3.213 3.764-1.658 6.646l23.599 43.532c-23.929 12.203-42.987 29.198-57.167 51.022-14.18 21.836-21.273 45.698-21.273 71.628h307.426c0-25.924-7.094-49.787-21.273-71.628-14.181-21.824-33.129-38.819-56.832-51.022zm-136.433 63.318c-2.552 2.558-5.6 3.831-9.143 3.831-3.55 0-6.536-1.273-8.972-3.831-2.436-2.546-3.654-5.582-3.654-9.137 0-3.543 1.218-6.585 3.654-9.137 2.436-2.546 5.429-3.819 8.972-3.819s6.591 1.273 9.143 3.819c2.546 2.558 3.825 5.594 3.825 9.137-.007 3.549-1.285 6.591-3.825 9.137zm140.086 0c-2.441 2.558-5.434 3.831-8.971 3.831-3.551 0-6.598-1.273-9.145-3.831-2.551-2.546-3.824-5.582-3.824-9.137 0-3.543 1.273-6.585 3.824-9.137 2.547-2.546 5.594-3.819 9.145-3.819 3.543 0 6.529 1.273 8.971 3.819 2.438 2.558 3.654 5.594 3.654 9.137 0 3.549-1.217 6.591-3.654 9.137zM123.971 406.804c0 10.202 3.543 18.838 10.63 25.925 7.093 7.087 15.729 10.63 25.924 10.63h24.596l.337 75.454c0 9.528 3.323 17.619 9.969 24.266s14.627 9.97 23.929 9.97c9.523 0 17.613-3.323 24.26-9.97s9.97-14.737 9.97-24.266v-75.447h45.864v75.447c0 9.528 3.322 17.619 9.969 24.266s14.73 9.97 24.26 9.97c9.523 0 17.613-3.323 24.26-9.97s9.969-14.737 9.969-24.266v-75.447h24.928c9.969 0 18.494-3.544 25.594-10.631 7.086-7.087 10.631-15.723 10.631-25.924V185.45h-305.09v221.354zM476.275 179.141c-9.309 0-17.283 3.274-23.93 9.804-6.646 6.542-9.969 14.578-9.969 24.094v142.914c0 9.541 3.322 17.619 9.969 24.266s14.627 9.97 23.93 9.97c9.523 0 17.613-3.323 24.26-9.97s9.969-14.725 9.969-24.266V213.039c0-9.517-3.322-17.552-9.969-24.094-6.647-6.53-14.737-9.804-24.26-9.804z"/></svg>
+              </div>
+              <p>A matrimonial website and Android app created for the Kutch Kadva Patidar Sanatan and Samaj community. It is completely free to use.</p>
             </div>
             <div class="relative flex flex-col space-y-4 md:w-1/3">
-              <img class="w-64" src="images/IM_web.JPG" alt=""/>
-              <img class="absolute w-16 top-10 left-40" src="images/im_mobile.png" alt=""/>
-              <h3 class="text-xl font-medium">Indian Matrimonial</h3>
-              <p>Some blurb</p>
+              <img class="w-80" src="images/IM_web.JPG" alt=""/>
+              <img class="absolute w-20 drop-shadow-lg top-14 left-52 md:top-8 md:w-16 md:left-40 lg:top-14 lg:left-56 lg:w-20" src="images/im_mobile.png" alt=""/>
+              <h3 class="pt-8 text-xl font-medium">Indian Matrimonial</h3>
+              <div class="flex flex-row items-start space-x-2">
+                <svg class="w-5 opacity-80" viewBox="0 0 24 24"><defs><style>.cls-1{fill:none;stroke:#020202;stroke-miterlimit:10;stroke-width:1.92px}</style></defs><g id="roll_brush" data-name="roll brush"><path d="M1.46 1.5h21.1v21.1H1.46z" class="cls-1"/><path d="M22.56 7.25H1.46V1.5h21.1v5.75zM4.34 4.38h1.91M8.17 4.38h1.92M12.01 4.38h1.92" class="cls-1"/></g></svg>
+                <svg class="w-5 opacity-80" viewBox="0 0 553.048 553.048"><path d="M76.774 179.141c-9.529 0-17.614 3.323-24.26 9.969-6.646 6.646-9.97 14.621-9.97 23.929v142.914c0 9.541 3.323 17.619 9.97 24.266 6.646 6.646 14.731 9.97 24.26 9.97 9.522 0 17.558-3.323 24.101-9.97 6.53-6.646 9.804-14.725 9.804-24.266V213.039c0-9.309-3.323-17.283-9.97-23.929-6.647-6.646-14.627-9.969-23.935-9.969zM351.972 50.847 375.57 7.315c1.549-2.882.998-5.092-1.658-6.646-2.883-1.34-5.098-.661-6.646 1.989l-23.928 43.88c-21.055-9.309-43.324-13.972-66.807-13.972-23.488 0-45.759 4.664-66.806 13.972l-23.929-43.88c-1.555-2.65-3.77-3.323-6.646-1.989-2.662 1.561-3.213 3.764-1.658 6.646l23.599 43.532c-23.929 12.203-42.987 29.198-57.167 51.022-14.18 21.836-21.273 45.698-21.273 71.628h307.426c0-25.924-7.094-49.787-21.273-71.628-14.181-21.824-33.129-38.819-56.832-51.022zm-136.433 63.318c-2.552 2.558-5.6 3.831-9.143 3.831-3.55 0-6.536-1.273-8.972-3.831-2.436-2.546-3.654-5.582-3.654-9.137 0-3.543 1.218-6.585 3.654-9.137 2.436-2.546 5.429-3.819 8.972-3.819s6.591 1.273 9.143 3.819c2.546 2.558 3.825 5.594 3.825 9.137-.007 3.549-1.285 6.591-3.825 9.137zm140.086 0c-2.441 2.558-5.434 3.831-8.971 3.831-3.551 0-6.598-1.273-9.145-3.831-2.551-2.546-3.824-5.582-3.824-9.137 0-3.543 1.273-6.585 3.824-9.137 2.547-2.546 5.594-3.819 9.145-3.819 3.543 0 6.529 1.273 8.971 3.819 2.438 2.558 3.654 5.594 3.654 9.137 0 3.549-1.217 6.591-3.654 9.137zM123.971 406.804c0 10.202 3.543 18.838 10.63 25.925 7.093 7.087 15.729 10.63 25.924 10.63h24.596l.337 75.454c0 9.528 3.323 17.619 9.969 24.266s14.627 9.97 23.929 9.97c9.523 0 17.613-3.323 24.26-9.97s9.97-14.737 9.97-24.266v-75.447h45.864v75.447c0 9.528 3.322 17.619 9.969 24.266s14.73 9.97 24.26 9.97c9.523 0 17.613-3.323 24.26-9.97s9.969-14.737 9.969-24.266v-75.447h24.928c9.969 0 18.494-3.544 25.594-10.631 7.086-7.087 10.631-15.723 10.631-25.924V185.45h-305.09v221.354zM476.275 179.141c-9.309 0-17.283 3.274-23.93 9.804-6.646 6.542-9.969 14.578-9.969 24.094v142.914c0 9.541 3.322 17.619 9.969 24.266s14.627 9.97 23.93 9.97c9.523 0 17.613-3.323 24.26-9.97s9.969-14.725 9.969-24.266V213.039c0-9.517-3.322-17.552-9.969-24.094-6.647-6.53-14.737-9.804-24.26-9.804z"/></svg>
+                <svg class="w-4 opacity-80" viewBox="4 32 376.4 449.4"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+              </div>
+              <p>Indian Matrimonial is a community service designed specifically to cater for Indians in Australia who are looking for a marriage partner who are also living in Australia or New Zealand. A website, Android app and iOS app was created using a single code base thus providing great savings to the client.</p>
             </div>
             <div class="relative flex flex-col space-y-4 md:w-1/3">
-              <img class="w-64" src="images/clean_web.JPG" alt=""/>
-              <img class="absolute w-16 top-10 left-40" src="images/clean_mobile.png" alt=""/>
-              <h3 class="text-xl font-medium">Cleaning Project</h3>
-              <p>Some blurb</p>
+              <img class="w-80" src="images/clean_web.JPG" alt=""/>
+              <img class="absolute w-20 drop-shadow-lg top-14 left-52 md:top-8 md:w-16 md:left-40 lg:top-14 lg:left-56 lg:w-20" src="images/clean_mobile.png" alt=""/>
+              <h3 class="pt-8 text-xl font-medium">Cleaning Project</h3>
+              <div class="flex flex-row items-start space-x-2">
+                <svg class="w-5 opacity-80" viewBox="0 0 24 24"><defs><style>.cls-1{fill:none;stroke:#020202;stroke-miterlimit:10;stroke-width:1.92px}</style></defs><g id="roll_brush" data-name="roll brush"><path d="M1.46 1.5h21.1v21.1H1.46z" class="cls-1"/><path d="M22.56 7.25H1.46V1.5h21.1v5.75zM4.34 4.38h1.91M8.17 4.38h1.92M12.01 4.38h1.92" class="cls-1"/></g></svg>
+                <svg class="w-5 opacity-80" viewBox="0 0 553.048 553.048"><path d="M76.774 179.141c-9.529 0-17.614 3.323-24.26 9.969-6.646 6.646-9.97 14.621-9.97 23.929v142.914c0 9.541 3.323 17.619 9.97 24.266 6.646 6.646 14.731 9.97 24.26 9.97 9.522 0 17.558-3.323 24.101-9.97 6.53-6.646 9.804-14.725 9.804-24.266V213.039c0-9.309-3.323-17.283-9.97-23.929-6.647-6.646-14.627-9.969-23.935-9.969zM351.972 50.847 375.57 7.315c1.549-2.882.998-5.092-1.658-6.646-2.883-1.34-5.098-.661-6.646 1.989l-23.928 43.88c-21.055-9.309-43.324-13.972-66.807-13.972-23.488 0-45.759 4.664-66.806 13.972l-23.929-43.88c-1.555-2.65-3.77-3.323-6.646-1.989-2.662 1.561-3.213 3.764-1.658 6.646l23.599 43.532c-23.929 12.203-42.987 29.198-57.167 51.022-14.18 21.836-21.273 45.698-21.273 71.628h307.426c0-25.924-7.094-49.787-21.273-71.628-14.181-21.824-33.129-38.819-56.832-51.022zm-136.433 63.318c-2.552 2.558-5.6 3.831-9.143 3.831-3.55 0-6.536-1.273-8.972-3.831-2.436-2.546-3.654-5.582-3.654-9.137 0-3.543 1.218-6.585 3.654-9.137 2.436-2.546 5.429-3.819 8.972-3.819s6.591 1.273 9.143 3.819c2.546 2.558 3.825 5.594 3.825 9.137-.007 3.549-1.285 6.591-3.825 9.137zm140.086 0c-2.441 2.558-5.434 3.831-8.971 3.831-3.551 0-6.598-1.273-9.145-3.831-2.551-2.546-3.824-5.582-3.824-9.137 0-3.543 1.273-6.585 3.824-9.137 2.547-2.546 5.594-3.819 9.145-3.819 3.543 0 6.529 1.273 8.971 3.819 2.438 2.558 3.654 5.594 3.654 9.137 0 3.549-1.217 6.591-3.654 9.137zM123.971 406.804c0 10.202 3.543 18.838 10.63 25.925 7.093 7.087 15.729 10.63 25.924 10.63h24.596l.337 75.454c0 9.528 3.323 17.619 9.969 24.266s14.627 9.97 23.929 9.97c9.523 0 17.613-3.323 24.26-9.97s9.97-14.737 9.97-24.266v-75.447h45.864v75.447c0 9.528 3.322 17.619 9.969 24.266s14.73 9.97 24.26 9.97c9.523 0 17.613-3.323 24.26-9.97s9.969-14.737 9.969-24.266v-75.447h24.928c9.969 0 18.494-3.544 25.594-10.631 7.086-7.087 10.631-15.723 10.631-25.924V185.45h-305.09v221.354zM476.275 179.141c-9.309 0-17.283 3.274-23.93 9.804-6.646 6.542-9.969 14.578-9.969 24.094v142.914c0 9.541 3.322 17.619 9.969 24.266s14.627 9.97 23.93 9.97c9.523 0 17.613-3.323 24.26-9.97s9.969-14.725 9.969-24.266V213.039c0-9.517-3.322-17.552-9.969-24.094-6.647-6.53-14.737-9.804-24.26-9.804z"/></svg>
+              </div>
+              <p>This website and Android app allows cleaning contractors to schedule jobs and manage tasks throughout the whole process, and keep clients informed.</p>
             </div>
           </div>
         </div>
